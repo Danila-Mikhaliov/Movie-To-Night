@@ -22,12 +22,76 @@ body {
   grid-auto-rows: var(--row_increment);
   justify-content: center;
 }
-.card {
+
+.card__head-content{
   padding: 0;
   margin: 15px 10px;
   border-radius: 20px;
-  background-color: red;
+  // background-color: red;
+  overflow: hidden;
+  position: relative;
+
 }
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &:hover{
+    .card__menu{
+opacity: 1;
+visibility: visible;
+    }
+  }
+}
+.card__author{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: brown;
+  margin-left: 15px;
+}
+.card__author-name{
+  font-size: 1.2rem;
+  padding-left: 10px;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.card__menu{
+  font-size: 2rem;
+  background-color: lightgrey;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  opacity: 0;
+  visibility: hidden;
+}
+.card__menu-active{
+  background-color: lightgrey;
+  width: 100%;
+  height: 50%;
+  // border-radius: 50%;
+  position: absolute;
+  // right: 10%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__btn{
+  background-color: lightgrey;
+
+  font-size: 1rem;
+  margin-bottom: 20px;
+  height: 20%;
+  border-radius: 20px;
+}
+
 .card_small {
   grid-row-end: span var(--card_small);
 }
