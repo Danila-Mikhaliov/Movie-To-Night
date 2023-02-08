@@ -8,66 +8,223 @@
   </head>
   <body>
     <header class="main-header">
-      <img class="main-header__logo" src="./pinterest_icon.png" alt="logo-pinterest" />
-
-      <form action="#" class="main-header__header-search">
-        <button class="header-search__btn-search">
-          <img class="btn-search__logo" src="./icon-search.png" alt="logo-search" />
-        </button>
-        <input type="text" class="header-search__input" placeholder="Search" />
-      </form>
-
-      <div class="dropdown">
-        <div class="dropdown__select">
-          <span class="select__selected">Доска 1</span>
-          <div class="select__caret"></div>
+      <div class="main-header__container">
+        <img class="main-header__logo" src="./pinterest_icon.png" alt="logo-pinterest" />
+        <form action="#" class="main-header__header-search">
+          <button class="header-search__btn-search">
+            <img class="btn-search__logo" src="./icon-search.png" alt="logo-search" />
+          </button>
+          <input type="text" class="header-search__input" placeholder="Search" />
+        </form>
+        <div class="dropdown">
+          <div class="dropdown__select">
+            <div class="select__selected">Desk 1</div>
+            <div class="select__caret"></div>
+          </div>
+          <ul class="dropdown__menu">
+            <li class="menu__item active">Desk 1</li>
+            <li class="menu__item">Desk 2</li>
+            <li class="menu__item">Desk 3</li>
+          </ul>
         </div>
-        <ul class="dropdown__menu">
-          <li class="menu__item active">Доска 1</li>
-          <li class="menu__item">Доска 2</li>
-          <li class="menu__item">Доска 3</li>
-        </ul>
       </div>
     </header>
-    <div class="cards_container">
-      <div class="card" >
-        <div class="card__head-content">
-          <img src="./test.jpg" alt="dfg" />
-          <div class="card__menu"></div>
+    <!-- <section class="cards-list">
+      <div class="container">
+        <div class="cards-list__content">
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test2.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test2.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test2.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test2.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test2.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <img class="card__content-image" src="./test2.jpg" alt="image" />
+              <div class="card__content-menu"></div>
+              <div class="card__content-author">
+                <img class="card__content-author-icon" src="./test.jpg" alt="" >
+                <p class="card__content-author-name">Author Name</p>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        <span class="card__author"></span>
-        <span class="card__author-name">Author name</span>
+        
+        
       </div>
-      <div class="card">
-        <div class="card__head-content">
-          <img src="./test2.jpg" alt="fgd" />
-          <div class="card__menu"></div>
+    </section> -->
+    <section class="card-list">
+      <div class="container">
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
         </div>
-        <span class="card__author"></span>
-        <span class="card__author-name">Author name</span>
-      </div>
-      <div class="card">
-        <div class="card__head-content">
-          <img src="./test2.jpg" alt="fgd" />
-          <div class="card__menu"></div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/suspension-bridge.jpg" alt="The Clifton Suspension Bridge" />
+          <div class="card-author">
+            <p class="card-author-name">Author name</p>
+          </div>
         </div>
-        <span class="card__author"></span>
-        <span class="card__author-name">Author name</span>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/sunset.jpg" alt="Sunset and boats" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/snowy.jpg" alt="a river in the snow" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/bristol-balloons1.jpg" alt="a single checked balloon" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/dog-balloon.jpg" alt="a hot air balloon shaped like a dog" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/bristol-harbor.jpg" alt="sunrise over a harbor" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/abq-balloons.jpg" alt="View from a hot air balloon of other balloons" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/windmill.jpg" alt="A windmill" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/disney-balloon.jpg" alt="a balloon fairground ride" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/bristol-harbor.jpg" alt="sunrise over a harbor" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/bristol-balloons2.jpg" alt="three hot air balloons in a blue sky" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/toronto.jpg" alt="the Toronto light up sign at night" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-image" src="https://assets.codepen.io/12005/bristol-harbor.jpg" alt="sunrise over a harbor" />
+          <div class="card-author">
+            <img src="./test.jpg" alt="" class="card-author-icon">
+            <p class="card-author-name">Author name</p>
+          </div>
       </div>
-      <!-- <div class="card card_medium"></div>
-      <div class="card card_small"></div>
-      <div class="card card_medium"></div>
-      <div class="card card_large"></div>
-      <div class="card card_small"></div>
-      <div class="card card_small"></div>
-      <div class="card card_medium"></div>
-      <div class="card card_large"></div>
-      <div class="card card_medium"></div>
-      <div class="card card_large"></div>
-      <div class="card card_small"></div>
-      <div class="card card_medium"></div>
-      <div class="card card_small"></div>
-      <div class="card card_large"></div> -->
-    </div>
+    </section>
+    
   </body>
 </html>
+
+<!-- 
+
+<div class="card__head-content">
+  <img src="./test.jpg" alt="dfg" />
+  <div class="card__menu"></div>
+</div> -->

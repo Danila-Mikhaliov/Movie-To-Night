@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
   getDropdown()
 })
 
-const allCartMenu = document.querySelectorAll('.card__menu')
+const allCartMenu = document.querySelectorAll('.card__content-menu')
 allCartMenu.forEach((item) => {
   item.addEventListener('click', createCardMenu)
 })
@@ -13,7 +13,7 @@ allCartMenu.forEach((item) => {
 function createCardMenu (event) {
   const cardMenu = event.target.parentNode
   const cardMenuActive = document.createElement('div')
-  cardMenuActive.classList.add('card__menu-active')
+  cardMenuActive.classList.add('card__content-menu-active')
 
   const btnAddDrop = document.createElement('button')
   btnAddDrop.type = 'button'
