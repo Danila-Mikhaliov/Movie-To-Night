@@ -201,6 +201,8 @@
   right: 10%;
   overflow: hidden;
   opacity: 0;
+  outline: none;
+  
 }
 .card-content-menu::before {
   content: "";
