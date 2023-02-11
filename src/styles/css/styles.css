@@ -151,6 +151,7 @@
   -webkit-column-break-inside: avoid;
      -moz-column-break-inside: avoid;
           break-inside: avoid;
+  margin-bottom: 1.2rem;
 }
 .card:hover .card-content-menu {
   overflow: visible;
@@ -202,7 +203,7 @@
   overflow: hidden;
   opacity: 0;
   outline: none;
-  
+  border: none;
 }
 .card-content-menu::before {
   content: "";
