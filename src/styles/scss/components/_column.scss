@@ -60,6 +60,8 @@
   right: 10%;
   overflow: hidden;
   opacity: 0;
+  outline: none;
+  border: none;
   &::before{
     content: '';
     position: absolute;
@@ -91,8 +93,8 @@
     height: 4px;
     border-radius: 50%;
     background-color: black;
-   top: 45%;
-   left: 45%;
+    top: 45%;
+    left: 45%;
 }
 
 .card-content-menu-active{

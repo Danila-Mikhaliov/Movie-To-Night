@@ -1,8 +1,3 @@
-const allCartMenu = document.querySelectorAll('.card-content-menu')
-allCartMenu.forEach((item) => {
-  item.addEventListener('click', createCardMenu)
-})
-
 export function createCardMenu (event) {
   const cardMenu = event.target.parentNode
   const cardMenuActive = document.createElement('div')
@@ -20,11 +15,15 @@ export function createCardMenu (event) {
 
   cardMenu.append(cardMenuActive)
   cardMenuActive.append(btnAddDrop, btnComplain)
-  cardMenuActive.addEventListener('click', () => closeCardMenu(event, cardMenuActive))
-}
-function closeCardMenu (event, element) {
-  if (event.target === element.id) {
-    return
+  const closeCardMenu = (e) => {
+    if (e.target.parentNode.id === cardMenu.id) {
+      return
+    } else {
+      cardMenuActive.remove()
+    }
+    window.removeEventListener('click', closeCardMenu)
   }
-  element.remove()
+
+  window.addEventListener('click', closeCardMenu)
+  cardMenuActive.addEventListener('click', () => closeCardMenu(event, cardMenuActive))
 }
