@@ -1,13 +1,13 @@
 import { createCardMenu } from './createCardMenu.js'
 const container = document.querySelector('.container')
 
-export function createCard (img) {
+export function createCard (name, avatar, image, id) {
   const card = document.createElement('div')
   card.className = 'card'
-  card.id = Date.now() * Math.random()
+  card.id = id
 
   const cardImage = document.createElement('img')
-  cardImage.src = img
+  cardImage.src = image
   cardImage.className = 'card-image'
   cardImage.alt = 'A windmill'
 
@@ -20,11 +20,11 @@ export function createCard (img) {
 
   const cardAuthorIcon = document.createElement('img')
   cardAuthorIcon.className = 'card-author-icon'
-  cardAuthorIcon.src = './test.jpg'
+  cardAuthorIcon.src = avatar
 
   const cardAuthorName = document.createElement('p')
   cardAuthorName.className = 'card-author-name'
-  cardAuthorName.innerText = 'Author name'
+  cardAuthorName.innerText = name
 
   cardAuthor.append(cardAuthorIcon, cardAuthorName)
   card.append(cardImage, cardContentMenu, cardAuthor)
