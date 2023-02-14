@@ -12,8 +12,8 @@ async function getCards () {
   load.toggleAttribute('hidden', false)
   const result = await fetch(URL)
     .then((response) => response.json())
-    .then((user) => (user))
+    .then((user) => user)
     .finally(() => load.toggleAttribute('hidden', true))
-  result.forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
+  result.sort(() => Math.random() - 0.5).forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
 }
 getCards()
