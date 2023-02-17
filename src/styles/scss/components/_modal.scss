@@ -1,61 +1,121 @@
 .btn {
-	border: none;
-	cursor: pointer;
-	background-color: #000;
-	color: #fff;
-	padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
 }
 
 .modal-overlay {
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.7);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 100%;
-	transition: all 0.3s ease-in-out;
-    
-}
-
-.modal {
-	background-color: #fff;
-	width: 300px;
-	height: 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-    border-radius: 30px;
-    padding: 20px;
-    
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .modal--visible {
-	display: block;
+  display: block;
 }
 
-.modal-select-desk {
-    height: 200px;
+.modal {
+  background-color: #fff;
+  max-width: 350px;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0.1rem;
 
-		// .modal-select-desk__modal-list
+  &__btn-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  &__close-btn{
+  cursor: pointer;
+  color: black;
+	font-weight: 700;
+	font-size: 1.25rem;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+  transition: 0.2s;
+  }
+  &__close-btn:hover{
+    scale: 1.03;
+  }
 
-		&__modal-list {
-		}
+  &__send-btn{
+  cursor: pointer;
+	background-color: #E60023;
+	color: white;
+	font-weight: 700;
+	font-size: 1.25rem;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+  transition: 0.2s;
 }
-
-.modal__title {
-    text-align: center;
+&__send-btn:hover{
+  scale: 1.03;
 }
-.modal-list {
+  &__title {
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+  }
+  &__list {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  &__list-item {
+    list-style: none;
+	margin-bottom: 0.5rem;
+  }
+  &__list-item-name{
+	font-family: Roboto;
+  }
+	&__list-item-checkbox {
+		position: relative;
+		margin-right: 2rem;
+	  }
+	  &__list-item-checkbox::before {
+		content: '';
+		width: 24px;
+		height: 24px;
+		background-color: white;
+		border: 1px solid grey;
+		border-radius: 5px;
+		position: absolute;
+		top: -8px;
+		left: -4px;
+	  }
+	  &__list-item-checkbox:checked::after {
+		content: '';
+		background-image: url('https://cdn-icons-png.flaticon.com/512/1632/1632646.png');
+		background-size: cover;
+		border: none;
+		background-repeat: no-repeat;
+		background-position-x: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		position: absolute;
+		top: -8px;
+		left: -4px;
+	  }
 
-		// .modal-list__item
-
-		&__item {
-           list-style: none;
-		}
 }

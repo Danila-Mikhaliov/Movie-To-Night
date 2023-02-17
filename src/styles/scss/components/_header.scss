@@ -1,5 +1,9 @@
+body{
+  font-family: Roboto;
+  font-weight: 400;
+}
 .main-header {
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto;
 }
 .main-header__container {
   max-width: 1500px;
@@ -20,11 +24,12 @@
   width: 100%;
   height: 48px;
   background: #f0f0f0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1rem;
   border: none;
   border-radius: 3em;
   padding: 0 0 0 50px;
+  font-family: Roboto;
 }
 
 .header-search__btn-search {
@@ -44,6 +49,9 @@
   min-width: 7em;
   position: relative;
   margin: 2em;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1rem;
   &__select {
     color: black;
     display: flex;

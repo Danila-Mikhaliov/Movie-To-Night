@@ -7,13 +7,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const URL = 'https://63e2831e109336b6cb097eba.mockapi.io/api/pinterest/pinterest-clone'
 
+const load = document.querySelector('.spinner')
+load.toggleAttribute('hidden', false)
+
+const getData = () => fetch(URL)
+  .then((response) => response.json())
+  .then((user) => user)
+
 async function getCards () {
   const load = document.querySelector('.spinner')
   load.toggleAttribute('hidden', false)
-  const result = await fetch(URL)
-    .then((response) => response.json())
-    .then((user) => user)
+  const result = await getData()
     .finally(() => load.toggleAttribute('hidden', true))
-  result.sort(() => Math.random() - 0.5).forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
+  result.forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
 }
 getCards()
