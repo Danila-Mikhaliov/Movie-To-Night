@@ -1,10 +1,7 @@
-.container {
-  max-width: 1200px;
-}
 .card-image {
   max-width: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .card-list {
@@ -32,8 +29,8 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
-  column-count: 4;
+  max-width: 1300px;
+  column-count: 6;
   column-gap: 1.2rem;
 }
 
@@ -109,17 +106,23 @@
   align-items: center;
 }
 .card__btn {
-  background-color: lavender;
+  font-family: Roboto;
+  font-weight: 500;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   font-size: 1rem;
   margin-bottom: 20px;
-  height: 40px;
+  min-height: 2rem;
   border-radius: 20px;
   border: none;
-  padding: 0 15px;
+  padding: 0 0.7rem;
+  transition: 0.2s;
   &:hover {
-    background-color: white;
+    scale: 1.02;
   }
+}
+.card-btn-add-drop{
+  background-color: #E60023;
+  color: white;
 }
 
 
@@ -129,6 +132,4 @@
   margin: 0 auto;
 overflow-y: auto;
 background-color: black;
-
-
 }
