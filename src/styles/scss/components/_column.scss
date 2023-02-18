@@ -33,6 +33,26 @@
   column-count: 6;
   column-gap: 1.2rem;
 }
+@media screen and (max-width: 1440px){
+  .container {
+    column-count: 5;
+  }
+}
+@media screen and (max-width: 1024px){
+  .container {
+    column-count: 4;
+  }
+}
+@media screen and (max-width: 768px){
+  .container {
+    column-count: 3;
+  }
+}
+@media screen and (max-width: 548px){
+  .container {
+    column-count: 2;
+  }
+}
 
 .card-author-icon {
   border-radius: 50%;
