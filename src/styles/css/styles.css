@@ -400,8 +400,8 @@ body {
 
 .modal {
   background-color: #fff;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 530px;
+  max-height: 530px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +416,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px;
-  padding: 0.1rem;
+  padding: 1rem;
 }
 .modal__btn-content {
   display: -webkit-box;
@@ -425,7 +425,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 .modal__close-btn {
   cursor: pointer;
@@ -433,7 +433,7 @@ body {
   font-weight: 700;
   font-size: 1.25rem;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 20px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -448,13 +448,17 @@ body {
   font-weight: 700;
   font-size: 1.25rem;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 20px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .modal__send-btn:hover {
   scale: 1.03;
+}
+.modal__title {
+  text-align: center;
+  font-size: 1.8rem;
 }
 .modal__form {
   display: -webkit-box;
@@ -475,10 +479,16 @@ body {
 }
 .modal__list-item {
   list-style: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .modal__list-item-name {
+  font-weight: 400;
   font-family: Roboto;
+  padding-bottom: 1rem;
+}
+.modal__list-item-subtitle {
+  font-weight: 300;
+  padding-left: 3rem;
 }
 .modal__list-item-checkbox {
   position: relative;
@@ -489,23 +499,23 @@ body {
   width: 24px;
   height: 24px;
   background-color: white;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 2px solid grey;
+  border-radius: 50%;
   position: absolute;
   top: -8px;
   left: -4px;
 }
 .modal__list-item-checkbox:checked::after {
   content: "";
-  background-image: url("https://cdn-icons-png.flaticon.com/512/1632/1632646.png");
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1828/1828796.png");
   background-size: cover;
-  border: none;
+  border: 1px solid black;
   background-repeat: no-repeat;
   background-position-x: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   position: absolute;
-  top: -8px;
-  left: -4px;
+  top: -7px;
+  left: -3px;
 }

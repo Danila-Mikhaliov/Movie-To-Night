@@ -12,7 +12,7 @@ export function createModal (overlay, arr) {
   const modalList = document.createElement('ul')
   modalList.className = 'modal__list'
 
-  const list = arr.map(({ title, id }) => {
+  const list = arr.map(({ title, subtitle, id }) => {
     const modalListItem = document.createElement('li')
     modalListItem.className = 'modal__list-item'
 
@@ -25,8 +25,17 @@ export function createModal (overlay, arr) {
     label.className = 'modal__list-item-name'
     label.innerText = title
 
-    modalListItem.append(checkbox, label)
-    return modalListItem
+    if (subtitle) {
+      const labelSubtitle = document.createElement('div')
+      labelSubtitle.className = 'modal__list-item-subtitle'
+      labelSubtitle.innerText = `${subtitle}`
+
+      modalListItem.append(checkbox, label, labelSubtitle)
+      return modalListItem
+    } else {
+      modalListItem.append(checkbox, label)
+      return modalListItem
+    }
   })
 
   const btnsModal = document.createElement('div')
