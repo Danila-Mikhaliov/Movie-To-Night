@@ -27,19 +27,19 @@
 
 .modal {
   background-color: #fff;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 530px;
+  max-height: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  padding: 0.1rem;
+  padding: 1rem;
 
   &__btn-content{
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
   }
   &__close-btn{
   cursor: pointer;
@@ -47,7 +47,7 @@
 	font-weight: 700;
 	font-size: 1.25rem;
 	border: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	border-radius: 20px;
   transition: 0.2s;
   }
@@ -62,7 +62,7 @@
 	font-weight: 700;
 	font-size: 1.25rem;
 	border: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	border-radius: 20px;
   transition: 0.2s;
 }
@@ -70,6 +70,8 @@
   scale: 1.03;
 }
   &__title {
+    text-align: center;
+    font-size: 1.8rem;
   }
   &__form {
     display: flex;
@@ -83,10 +85,16 @@
   }
   &__list-item {
     list-style: none;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
   }
   &__list-item-name{
+  font-weight: 400;
 	font-family: Roboto;
+  padding-bottom: 1rem;
+  }
+  &__list-item-subtitle{
+    font-weight: 300;
+    padding-left: 3rem;
   }
 	&__list-item-checkbox {
 		position: relative;
@@ -97,25 +105,25 @@
 		width: 24px;
 		height: 24px;
 		background-color: white;
-		border: 1px solid grey;
-		border-radius: 5px;
+		border: 2px solid grey;
+		border-radius: 50%;
 		position: absolute;
 		top: -8px;
 		left: -4px;
 	  }
 	  &__list-item-checkbox:checked::after {
 		content: '';
-		background-image: url('https://cdn-icons-png.flaticon.com/512/1632/1632646.png');
+		background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828796.png');
 		background-size: cover;
-		border: none;
+		border: 1px solid black;
 		background-repeat: no-repeat;
 		background-position-x: center;
 		width: 24px;
 		height: 24px;
 		border-radius: 50%;
 		position: absolute;
-		top: -8px;
-		left: -4px;
+		top: -7px;
+		left: -3px;
 	  }
 
 }
