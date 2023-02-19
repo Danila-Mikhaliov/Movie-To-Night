@@ -109,3 +109,16 @@ body{
   display: block;
   opacity: 1;
 }
+
+.container__queries{
+  width: 100%;
+  min-height: 100px;
+  background-color: aqua;
+  position: absolute;
+  z-index: 11;
+left: 2%;
+}
+
+.queries__title{
+  
+}
