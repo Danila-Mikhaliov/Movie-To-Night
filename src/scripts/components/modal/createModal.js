@@ -12,25 +12,47 @@ export function createModal (overlay, arr) {
   const modalList = document.createElement('ul')
   modalList.className = 'modal__list'
 
-  const list = arr.map(({ title, id }) => {
-    const item = document.createElement('li')
-    item.className = 'modal-list__item'
-    item.innerText = title
+  const list = arr.map(({ title, subtitle, id }) => {
+    const modalListItem = document.createElement('li')
+    modalListItem.className = 'modal__list-item'
 
     const checkbox = document.createElement('input')
-    checkbox.className = 'modal-list__item-checkbox'
+    checkbox.className = 'modal__list-item-checkbox'
     checkbox.type = 'checkbox'
     checkbox.id = id
 
-    item.prepend(checkbox)
+    const label = document.createElement('label')
+    label.className = 'modal__list-item-name'
+    label.innerText = title
 
-    return item
+    if (subtitle) {
+      const labelSubtitle = document.createElement('div')
+      labelSubtitle.className = 'modal__list-item-subtitle'
+      labelSubtitle.innerText = `${subtitle}`
+
+      modalListItem.append(checkbox, label, labelSubtitle)
+      return modalListItem
+    } else {
+      modalListItem.append(checkbox, label)
+      return modalListItem
+    }
   })
 
+  const btnsModal = document.createElement('div')
+  btnsModal.className = 'modal__btn-content'
+
   const modalSendBtn = document.createElement('button')
-  modalSendBtn.type = 'button'
   modalSendBtn.className = 'modal__send-btn'
   modalSendBtn.innerText = 'Send'
+
+  const modalCloseBtn = document.createElement('button')
+  modalCloseBtn.className = 'modal__close-btn'
+  modalCloseBtn.innerText = 'Close'
+  modalCloseBtn.addEventListener('click', () => {
+    overlay.remove()
+  })
+
+  btnsModal.append(modalSendBtn, modalCloseBtn)
 
   modalSendBtn.addEventListener('click', () => {
     //  valueComplain дальше понадобится для того чтобы знать какие чекбоксы были нажаты
@@ -38,9 +60,8 @@ export function createModal (overlay, arr) {
     // const valueComplain = new Array(...checkboxes).filter((el) => el.checked).map((el) => el.id)
     overlay.remove()
   })
-
-  modalForm.append(modalList, modalSendBtn)
   modalList.append(...list)
+  modalForm.append(modalList, btnsModal)
   modal.append(modalTitle, modalForm)
   return modal
 }
