@@ -3,6 +3,7 @@ import { openModal } from './modal/openModal.js'
 export function createCardMenu (event) {
   const cardMenu = event.target.parentNode
   const cardMenuActive = document.createElement('div')
+  cardMenuActive.id = cardMenu.id
   cardMenuActive.classList.add('card-content-menu-active')
 
   const btnAddDrop = document.createElement('button')
