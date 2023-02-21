@@ -1,3 +1,5 @@
+import { selectDeskList } from './modalArrayList.js'
+
 export function createModal (overlay, arr) {
   const modal = document.createElement('div')
   modal.className = 'modal-select-desk'
@@ -58,40 +60,18 @@ export function createModal (overlay, arr) {
   modalSendBtn.addEventListener('click', () => {
     const checkboxes = document.querySelectorAll('.modal__list-item-checkbox')
     const cardId = modal.id
-    const valueComplain = new Array(...checkboxes).filter((el) => el.checked).map((el) => el.id)
-    valueComplain.forEach((desk) => {
-      if (desk === '777') {
-        if (localStorage.getItem('desk1') !== null) {
-          const local = JSON.parse(localStorage.getItem('desk1'))
-          local.push(cardId)
-          localStorage.setItem('desk1', JSON.stringify(local))
-        } else {
-          const local = []
-          local.push(cardId)
-          localStorage.setItem('desk1', JSON.stringify(local))
-        }
-      } else if (desk === '888') {
-        if (localStorage.getItem('desk2') !== null) {
-          const local = JSON.parse(localStorage.getItem('desk2'))
-          local.push(cardId)
-          localStorage.setItem('desk2', JSON.stringify(local))
-        } else {
-          const local = []
-          local.push(cardId)
-          localStorage.setItem('desk2', JSON.stringify(local))
-        }
-      } else if (desk === '999') {
-        if (localStorage.getItem('desk3') !== null) {
-          const local = JSON.parse(localStorage.getItem('desk3'))
-          local.push(cardId)
-          localStorage.setItem('desk3', JSON.stringify(local))
-        } else {
-          const local = []
-          local.push(cardId)
-          localStorage.setItem('desk3 ', JSON.stringify(local))
-        }
-      }
-    })
+    new Array(...checkboxes)
+      .filter((el) => el.checked)
+      .map((el) => {
+        const [item] = selectDeskList.filter(({ id }) => el.id === id)
+
+        return item?.title
+      })
+      .forEach((key) => {
+        const desk = JSON.parse(localStorage.getItem(key)) || []
+        desk.push(cardId)
+        localStorage.setItem(key, JSON.stringify(desk))
+      })
     overlay.remove()
   })
   modalList.append(...list)

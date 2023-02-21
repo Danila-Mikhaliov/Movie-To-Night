@@ -35,14 +35,14 @@ export const complainList = [
 export const selectDeskList = [
   {
     title: 'Desk 1',
-    id: 777
+    id: '777'
   },
   {
     title: 'Desk 2',
-    id: 888
+    id: '888'
   },
   {
     title: 'Desk 3',
-    id: 999
+    id: '999'
   }
 ]
