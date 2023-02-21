@@ -1,4 +1,4 @@
-import { renderDesk } from '../index.js'
+import { renderDesk } from '../components/renderDesk.js'
 
 export function getDropdown () {
   const deskName = localStorage.getItem('DESK') || 'Home'

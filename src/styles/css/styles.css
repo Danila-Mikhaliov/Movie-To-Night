@@ -25,6 +25,7 @@ body {
 
 .main-header__logo {
   cursor: pointer;
+  padding: 1rem;
 }
 
 .main-header__header-search {
@@ -47,6 +48,7 @@ body {
   border-radius: 3em;
   padding: 0 0 0 50px;
   font-family: Roboto;
+  text-overflow: ellipsis;
 }
 
 .header-search__input:focus {

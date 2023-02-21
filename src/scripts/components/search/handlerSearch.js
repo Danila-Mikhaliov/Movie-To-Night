@@ -1,4 +1,4 @@
-import { globalObj, renderDesk } from '../../index.js'
+import { globalObj, renderDesk } from '../renderDesk.js'
 
 export async function handlerSearch (event, value) {
   const cardsContainer = document.querySelector('.container')
