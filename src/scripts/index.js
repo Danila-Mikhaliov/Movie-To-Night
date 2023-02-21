@@ -23,3 +23,14 @@ async function getCards () {
 }
 getCards()
 createDropdownSearch()
+
+async function renderDesk (deskNumber) {
+  const data = await getData() // получаем массив из mockapi
+  const local = await localStorage.getItem(deskNumber) // проверка локального хранилища по номеру доски
+  const result = await data.filter((i) => local.includes(i.id))
+  await console.log(result)
+}
+
+// renderDesk('desk1')
+// renderDesk('desk2')
+renderDesk('desk3')

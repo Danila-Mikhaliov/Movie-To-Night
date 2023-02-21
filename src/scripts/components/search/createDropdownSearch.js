@@ -1,7 +1,7 @@
 import { createPopularQueries } from './createPopularQueries.js'
 import { handlerSearch } from './handlerSearch.js'
 
-const POPULAR_IMAGE = ['cars', 'memes', 'sport', 'movie', 'abstract']
+const POPULAR_IMAGE = ['Cars', 'Memes', 'Sport', 'Movie', 'Abstract']
 
 export function createDropdownSearch () {
   const input = document.querySelector('.header-search__input')
@@ -16,10 +16,13 @@ export function createDropdownSearch () {
   const queriesTitle = document.createElement('h2')
   queriesTitle.className = 'queries__title'
   queriesTitle.innerText = 'Popular queries'
-  containerQueries.append(queriesTitle)
+  const queriesList = document.createElement('ul')
+  queriesList.className = 'queries__list'
+
+  containerQueries.append(queriesTitle, queriesList)
 
   POPULAR_IMAGE.forEach((text) => {
-    createPopularQueries(text, containerQueries, input)
+    createPopularQueries(text, queriesList, input)
   })
 
   input.addEventListener('focus', () => {

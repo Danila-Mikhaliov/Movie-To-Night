@@ -9,7 +9,7 @@ body {
 }
 
 .main-header__container {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
   display: -webkit-box;
@@ -28,8 +28,13 @@ body {
 }
 
 .main-header__header-search {
-  width: 70%;
+  width: 65%;
   position: relative;
+  padding-right: 50px;
+}
+
+.main-header__header-search:focus {
+  border: none;
 }
 
 .header-search__input {
@@ -42,6 +47,11 @@ body {
   border-radius: 3em;
   padding: 0 0 0 50px;
   font-family: Roboto;
+}
+
+.header-search__input:focus {
+  outline-color: #4a8ad4;
+  border: 4px solid #4a8ad4;
 }
 
 .header-search__btn-search {
@@ -62,7 +72,7 @@ body {
   display: flex;
   min-width: 7em;
   position: relative;
-  margin: 2em;
+  padding: 1rem;
   font-family: Roboto;
   font-weight: 500;
   font-size: 1rem;
@@ -139,6 +149,50 @@ body {
   opacity: 1;
 }
 
+.container__queries {
+  width: 85%;
+  min-height: 100px;
+  background-color: white;
+  position: absolute;
+  left: 2%;
+  z-index: 11;
+  -webkit-box-shadow: 2px 11px 10px 10px rgba(29, 29, 29, 0.6);
+          box-shadow: 2px 11px 10px 10px rgba(29, 29, 29, 0.6);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.queries__title {
+  padding-left: 1rem;
+}
+.queries__list {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  list-style-type: none;
+}
+.queries__list-item-button {
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 200px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  border: 2px solid grey;
+  background-color: #E9E9E9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 495px) {
+  .container__queries {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 344px) {
+  .header-search__input {
+    text-overflow: ellipsis;
+  }
+}
 .card-image {
   max-width: 100%;
   display: block;
@@ -304,7 +358,7 @@ body {
   min-height: 2rem;
   border-radius: 20px;
   border: none;
-  padding: 0 0.7rem;
+  padding: 10px 0.7rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
