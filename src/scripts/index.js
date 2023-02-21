@@ -1,7 +1,8 @@
 import '../styles/styles.scss'
 import { createDropdownSearch } from './components/search/createDropdownSearch'
 import { getDropdown } from './components/dropdown-menu.js'
-import { createCard } from './components/createCard.js'
+import { createCard, container } from './components/createCard.js'
+
 window.addEventListener('DOMContentLoaded', () => {
   getDropdown()
 })
@@ -15,22 +16,35 @@ export function getData () {
   return data
 }
 
+export const globalObj = {}
+
 async function getCards () {
   const load = document.querySelector('.spinner')
   load.toggleAttribute('hidden', false)
-  const result = await getData().finally(() => load.toggleAttribute('hidden', true))
-  result.forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
+  const result = await getData()
+    .then((arr) => arr.sort(() => Math.random() - 0.5))
+    .finally(() => load.toggleAttribute('hidden', true))
+  globalObj.result = result
+
+  renderDesk(result)
+}
+
+function renderCard (array) {
+  container.innerHTML = ''
+  array.forEach(({ name, avatar, image, id }) => createCard(name, avatar, image, id))
+}
+
+export function renderDesk (res = globalObj.result) {
+  const desk = localStorage.getItem('DESK') || 'Home'
+  if (desk === 'Home') {
+    renderCard(res)
+
+    return
+  }
+
+  const arrayIds = JSON.parse(localStorage.getItem(desk)) || []
+
+  renderCard(res.filter(({ id }) => arrayIds.includes(id)))
 }
 getCards()
 createDropdownSearch()
-
-async function renderDesk (deskNumber) {
-  const data = await getData() // получаем массив из mockapi
-  const local = await localStorage.getItem(deskNumber) // проверка локального хранилища по номеру доски
-  const result = await data.filter((i) => local.includes(i.id))
-  await console.log(result)
-}
-
-// renderDesk('desk1')
-// renderDesk('desk2')
-renderDesk('desk3')
