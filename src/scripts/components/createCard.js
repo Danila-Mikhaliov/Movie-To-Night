@@ -1,5 +1,5 @@
 import { createCardMenu } from './createCardMenu.js'
-const container = document.querySelector('.container')
+export const container = document.querySelector('.container')
 
 export function createCard (name, avatar, image, id) {
   const card = document.createElement('div')
