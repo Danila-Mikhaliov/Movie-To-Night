@@ -1,0 +1,5 @@
+.gitignore
+.prettier
+.husky
+node_modules
+webpack.config
