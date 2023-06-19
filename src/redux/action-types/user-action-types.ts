@@ -1,0 +1,16 @@
+const SIGN_UP = "SIGN_UP";
+const SIGN_UP_ACTIVATION = "SIGN_UP_ACTIVATION";
+const SIGN_IN = "SIGN_IN";
+const GET_USER = "GET_USER";
+const SET_USER = "SET_USER";
+const GET_TOKEN = "GET_TOKEN";
+const LOG_OUT = "LOG_OUT";
+export {
+  SIGN_UP,
+  SIGN_UP_ACTIVATION,
+  SIGN_IN,
+  GET_USER,
+  SET_USER,
+  GET_TOKEN,
+  LOG_OUT,
+};

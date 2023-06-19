@@ -1,0 +1,40 @@
+.movie-recommendation {
+  color: white;
+  padding: 10px;
+}
+.movie-recommendation__content {
+  background: linear-gradient(
+    90deg,
+    rgba(162, 89, 255, 1) 29%,
+    rgba(255, 98, 80, 1) 86%
+  );
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  font-family: "open sans";
+  align-items: center;
+  padding: 20px;
+}
+.movie-recommendation__content-poster {
+  width: 200px;
+}
+.movie-recommendation__content-info {
+}
+.movie-recommendation__content-info-name {
+  font-family: "Open sans";
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+}
+.movie-recommendation__content-info-year {
+  font-family: "Open sans";
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.movie-recommendation__content-info-length {
+}
+.movie-recommendation__content-info-description {
+}

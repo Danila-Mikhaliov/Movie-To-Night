@@ -1,0 +1,27 @@
+.user-info {
+  cursor: pointer;
+  max-width: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0px 5px;
+  border-radius: 8px;
+}
+.user-info__icon {
+  background-color: #a259ff;
+  font-style: italic;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.user-info__name {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1.1rem;
+  font-weight: 700;
+}

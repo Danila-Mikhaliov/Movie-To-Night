@@ -1,0 +1,12 @@
+export { UserInfo } from "./UserInfo";
+export { MovieCard } from "./Movie/MovieCard";
+export { MovieGrid } from "./Movie/MovieGrid";
+export { Header } from "./Header";
+export { Search } from "./Search";
+export { Button } from "./Button";
+export { MovieRecommendation } from "./Movie/MovieRecommendation";
+export { MovieSelected } from "./Movie/MovieSelected";
+export { SearchResultsPage } from "./SearchResultsPage";
+export { MovieFilter } from "./Movie/MovieFilter";
+export { SignIn } from "./SignIn";
+export { SignUp } from "./SignUp";

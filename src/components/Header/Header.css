@@ -1,0 +1,23 @@
+.header {
+  font-family: "open sans";
+  background-color: #3b3b3b;
+  padding: 5px;
+}
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header-logo {
+  color: #a259ff;
+  font-family: "open sans";
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+}

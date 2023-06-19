@@ -1,0 +1,37 @@
+.sign-in {
+  padding-top: 1.1rem;
+}
+.sign-in__content-name {
+  font-family: "Open Sans";
+  color: white;
+  font-size: 1.2rem;
+}
+.sign-in__content-header {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+.sign-in__content-registration {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.sign-in__content-registration-input-name {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 700;
+}
+.sign-in__content-registration-input {
+  color: #9747ff;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  width: 30%;
+  border-radius: 10px;
+}

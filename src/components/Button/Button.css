@@ -1,0 +1,10 @@
+.button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  width: fit-content;
+}

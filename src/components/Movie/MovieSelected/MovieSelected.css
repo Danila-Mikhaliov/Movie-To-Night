@@ -1,0 +1,43 @@
+.selected-movie {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+.selected-movie__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.selected-movie__content-name {
+  font-family: "Open sans";
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.selected-movie__content-poster {
+  border-radius: 20px;
+  width: 350px;
+}
+.selected-movie__content-length {
+  font-family: "Open sans";
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+.selected-movie__content-description {
+  max-width: 800px;
+  font-family: "Open sans";
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+.selected-movie__content-age {
+  font-family: "Open sans";
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
