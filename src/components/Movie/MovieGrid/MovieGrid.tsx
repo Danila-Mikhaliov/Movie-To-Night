@@ -26,55 +26,57 @@ const MovieGrid = () => {
 
   return (
     <div className="movie-grid">
-      <MovieRecommendation />
-      <div className="movie-grid__pagination">
-        <Button
-          isActive={currentPage !== 1}
-          content={"First page"}
-          callback={() => dispatch(setCurrentPage(1))}
-        />
-        <Button
-          isActive={currentPage !== 1}
-          content={"<<"}
-          callback={() => dispatch(setCurrentPage(currentPage - 1))}
-        />
-        <p className="movie-grid__pagination-page">{currentPage}</p>
-        <Button
-          isActive={currentPage !== total}
-          content={">>"}
-          callback={() => dispatch(setCurrentPage(currentPage + 1))}
-        />
-        <Button
-          isActive={currentPage !== total}
-          content={`${currentPage + 5} page`}
-          callback={() => dispatch(setCurrentPage(currentPage + 5))}
-        />
-      </div>
-      <MovieFilter />
       <div className="container">
-        {allMovie.map(
-          ({
-            type,
-            rating,
-            id,
-            movieLength,
-            name,
-            year,
-            poster,
-            ageRating,
-          }: IMovieInfo) => (
-            <MovieCard
-              type={type}
-              rating={rating}
-              id={id}
-              movieLength={movieLength}
-              name={name}
-              year={year}
-              poster={poster}
-              ageRating={ageRating}
-            />
-          )
-        )}
+        <MovieRecommendation />
+        <div className="movie-grid__pagination">
+          <Button
+            isActive={currentPage !== 1}
+            content={"First page"}
+            callback={() => dispatch(setCurrentPage(1))}
+          />
+          <Button
+            isActive={currentPage !== 1}
+            content={"<<"}
+            callback={() => dispatch(setCurrentPage(currentPage - 1))}
+          />
+          <p className="movie-grid__pagination-page">{currentPage}</p>
+          <Button
+            isActive={currentPage !== total}
+            content={">>"}
+            callback={() => dispatch(setCurrentPage(currentPage + 1))}
+          />
+          <Button
+            isActive={currentPage !== total}
+            content={`${currentPage + 5} page`}
+            callback={() => dispatch(setCurrentPage(currentPage + 5))}
+          />
+        </div>
+        <MovieFilter />
+        <div className="container">
+          {allMovie.map(
+            ({
+              type,
+              rating,
+              id,
+              movieLength,
+              name,
+              year,
+              poster,
+              ageRating,
+            }: IMovieInfo) => (
+              <MovieCard
+                type={type}
+                rating={rating}
+                id={id}
+                movieLength={movieLength}
+                name={name}
+                year={year}
+                poster={poster}
+                ageRating={ageRating}
+              />
+            )
+          )}
+        </div>
       </div>
     </div>
   );

@@ -2,17 +2,16 @@
   font-family: "open sans";
   background-color: #3b3b3b;
   padding: 5px;
+  width: 100%;
 }
 .header-content {
+  background-color: #3b3b3b;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
+
 .header-logo {
   color: #a259ff;
   font-family: "open sans";

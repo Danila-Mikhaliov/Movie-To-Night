@@ -115,7 +115,7 @@ export interface IRandomMovie {
   seasonsInfo: object;
   sequelsAndPrequels: object;
   shortDescription: null;
-  similarMovies: object;
+  similarMovies: IMovieAlternative[];
   slogan: null;
   spokenLanguages: object;
   status: null;
@@ -133,13 +133,24 @@ export interface IRandomMovie {
   ageRating: null;
   backdrop: object;
   logo: object;
-  budget: object;
+  budget: { value: number; currency: string };
   watchability: object;
   top10: null;
   top250: null;
   isSeries: boolean;
   seriesLength: null;
   totalSeriesLength: null;
+}
+export interface IMovieAlternative {
+  id: number;
+  name: string;
+  enName: string;
+  alternativeName: string;
+  type: string;
+  poster: {
+    url: string;
+    previewUrl: string;
+  };
 }
 export interface ISearchInfo {
   currentPage: number;

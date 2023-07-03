@@ -18,10 +18,9 @@ import { IStoreState } from "./types";
 function App() {
   const currentUser = useSelector((state: IStoreState) => state.user.user);
   const isAuthorized = !!currentUser?.id;
-  console.log(isAuthorized);
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="container">
         <Header />
         <Routes>
           <Route path="/">

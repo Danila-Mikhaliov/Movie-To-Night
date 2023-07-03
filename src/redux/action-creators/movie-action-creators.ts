@@ -109,7 +109,6 @@ function* fetchSelectedMovie(action: any) {
 function* fetchSearchMovie(action: any) {
   const { search } = action;
   const encode = encodeURI(search);
-  console.log(encode);
   const resp: Response = yield fetch(
     `https://api.kinopoisk.dev/v1.2/movie/search?page=1&limit=30&query=${encode}`,
     {
@@ -119,7 +118,6 @@ function* fetchSearchMovie(action: any) {
     }
   );
   const data: IMovieResponse = yield resp.json();
-  console.log(data);
   yield put(setSearchMovie(data.docs));
 }
 

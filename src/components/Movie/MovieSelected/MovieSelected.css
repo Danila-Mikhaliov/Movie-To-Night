@@ -5,6 +5,16 @@
   align-items: center;
   gap: 50px;
 }
+@media screen and (max-width: 900px) {
+  .selected-movie {
+    flex-direction: column;
+    align-items: center;
+  }
+  .selected-movie__content-poster {
+    display: flex;
+    margin: 0 auto;
+  }
+}
 .selected-movie__content {
   display: flex;
   align-items: center;
@@ -20,7 +30,8 @@
 }
 .selected-movie__content-poster {
   border-radius: 20px;
-  width: 350px;
+  align-self: flex-start;
+  width: 30%;
 }
 .selected-movie__content-length {
   font-family: "Open sans";
@@ -35,9 +46,18 @@
   font-weight: 500;
   color: white;
 }
-.selected-movie__content-age {
+.selected-movie__content-text {
   font-family: "Open sans";
   font-size: 1.2rem;
   font-weight: 500;
   color: white;
+}
+.selected-movie__content-trailer {
+  margin: 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+  color: white;
+  height: 300px;
+  cursor: pointer;
 }

@@ -1,0 +1,18 @@
+.movie-alt {
+  max-width: 500px;
+  background-color: #9747ff;
+}
+.movie-alt__content {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.movie-alt__content-poster {
+  width: 180px;
+}
+.swiper-wrapper {
+  width: 30%;
+}
+.movie-alt__content-name {
+  color: white;
+}

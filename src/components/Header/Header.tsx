@@ -14,7 +14,7 @@ const Header = () => {
           <Search />
           <UserInfo />
         </div>
-      </div>
+      </div>  
     </div>
   );
 };
