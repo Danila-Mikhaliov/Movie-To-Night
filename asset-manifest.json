@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-night/static/css/main.317470a8.css",
+    "main.js": "/movie-night/static/js/main.2b375300.js",
+    "index.html": "/movie-night/index.html",
+    "main.317470a8.css.map": "/movie-night/static/css/main.317470a8.css.map",
+    "main.2b375300.js.map": "/movie-night/static/js/main.2b375300.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.317470a8.css",
+    "static/js/main.2b375300.js"
+  ]
+}
