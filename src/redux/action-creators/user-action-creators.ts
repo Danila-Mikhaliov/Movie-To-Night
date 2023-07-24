@@ -41,7 +41,6 @@ function* getToken() {
     return access;
   }
 }
-
 const signUp = (user: IUser) => ({
   type: SIGN_UP,
   user,

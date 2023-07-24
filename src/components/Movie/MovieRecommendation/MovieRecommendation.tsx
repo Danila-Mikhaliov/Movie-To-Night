@@ -14,24 +14,32 @@ const MovieRecommendation = () => {
   return (
     <div className="movie-recommendation">
       <div className="container">
-        <div className="movie-recommendation__content">
-          <img
-            className="movie-recommendation__content-poster"
-            src={random.poster?.url}
-          />
-          <div className="movie-recommendation__content-info">
-            <NavLink to={`/movie/${random.id}`} className="movie-card__name">
-              {random.name}
-            </NavLink>
-            <p className="movie-recommendation__content-info-year">
-              {random.year}
-            </p>
-            <p className="movie-recommendation__content-info-length">
-              {random.movieLength ? `${random.movieLength} минуты` : ""}
-            </p>
-            <p className="movie-recommendation__content-info-description">
-              {random.description}
-            </p>
+        <div
+          className="movie-recommendation__content"
+          style={{ backgroundImage: `url(${random.poster?.url})` }}
+        >
+          <div className="movie-recommendation__content-cover">
+            <img
+              className="movie-recommendation__content-poster"
+              src={random.poster?.url}
+            />
+            <div className="movie-recommendation__content-info">
+              <NavLink
+                to={`/movie/${random.id}`}
+                className="movie-recommendation__content-info-name"
+              >
+                {random.name}
+              </NavLink>
+              <p className="movie-recommendation__content-info-text">
+                {random.year}г.
+              </p>
+              <p className="movie-recommendation__content-info-text">
+                {random.movieLength ? `${random.movieLength} минуты` : ""}
+              </p>
+              <p className="movie-recommendation__content-info-description">
+                {random.description}
+              </p>
+            </div>
           </div>
         </div>
       </div>

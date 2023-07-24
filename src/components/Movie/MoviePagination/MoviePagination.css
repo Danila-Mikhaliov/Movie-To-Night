@@ -1,0 +1,10 @@
+.movie-grid__pagination-content {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 1.3rem;
+}

@@ -30,7 +30,7 @@ export interface IMovieSearch {
   enName: string;
   names: object;
   type: string;
-  year: 1984;
+  year: number;
   description: string;
   shortDescription: string;
   logo: string;
@@ -60,10 +60,16 @@ export interface IMovieState {
   searchMovies: IMovieInfo[];
   sortField: string;
   movieType: string;
+  isLoading: boolean;
+  selectedActor: IActorResponse;
 }
 export interface IStoreState {
   movie: IMovieState;
   user: IUserState;
+  ui: IUIState;
+}
+export interface IUIState {
+  isLoading: boolean;
 }
 export interface IUserState {
   user: IUser;
@@ -92,7 +98,15 @@ export interface ITrailers {
   site: string;
   type: string;
 }
-
+export interface IPersons {
+  id: number;
+  photo: any;
+  name: any;
+  enName: any;
+  description: any;
+  profession: any;
+  enProfession: any;
+}
 export interface IRandomMovie {
   id: number;
   alternativeName: string;
@@ -107,7 +121,7 @@ export interface IRandomMovie {
   movieLength: number;
   name: string;
   names: object;
-  persons: object;
+  persons: IPersons[];
   poster: IMoviePoster;
   productionCompanies: object;
   rating: IMovieRating;
@@ -148,8 +162,8 @@ export interface IMovieAlternative {
   alternativeName: string;
   type: string;
   poster: {
-    url: string;
-    previewUrl: string;
+    url?: string;
+    previewUrl?: string;
   };
 }
 export interface ISearchInfo {
@@ -164,4 +178,39 @@ export interface IActivation {
 export interface IUserResponse {
   access: string;
   refresh: string;
+}
+export interface IActorMovies {
+  id: number;
+  name: string;
+  rating: number;
+  general: boolean;
+  description: string;
+}
+export interface IActorResponse {
+  isParse: boolean;
+  id: number;
+  name: string;
+  enName: string;
+  photo: string;
+  profession: any;
+  birthPlace: any;
+  deathPlace: null;
+  facts: any;
+  movies: IActorMovies[];
+  age: number;
+  birthday: string;
+  countAwards: any;
+  death: any;
+  growth: number;
+  sex: string;
+  spouses: [
+    {
+      id: number;
+      name: any;
+      divorced: any;
+      children: any;
+      relation: string;
+    }
+  ];
+  updatedAt: string;
 }

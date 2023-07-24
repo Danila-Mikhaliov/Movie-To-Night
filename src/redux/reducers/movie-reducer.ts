@@ -1,4 +1,4 @@
-import { IRandomMovie } from "./../../types";
+import { IActorResponse, IRandomMovie } from "./../../types";
 import { IMovieInfo } from "../../types";
 import {
   SET_CURRENTPAGE,
@@ -9,6 +9,8 @@ import {
   SET_SELECTED,
   SET_SORTFIELD,
   SET_TOTALPAGES,
+  SET_ISLOADING,
+  SET_ACTOR,
 } from "../action-types/movie-action-types";
 
 const initialState = {
@@ -20,6 +22,7 @@ const initialState = {
   searchMovies: [] as IRandomMovie[],
   sortField: "votes.kp",
   movieType: "movie",
+  selectedActor: {} as IActorResponse,
 };
 
 const movieReducer = (state = initialState, action: any) => {
@@ -78,6 +81,20 @@ const movieReducer = (state = initialState, action: any) => {
       return {
         ...state,
         movieType,
+      };
+    }
+    case SET_ISLOADING: {
+      const { isLoading } = action;
+      return {
+        ...state,
+        isLoading,
+      };
+    }
+    case SET_ACTOR: {
+      const { selectedActor } = action;
+      return {
+        ...state,
+        selectedActor,
       };
     }
     default: {

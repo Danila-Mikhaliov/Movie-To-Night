@@ -2,10 +2,11 @@ import "./Header.css";
 import { UserInfo } from "../UserInfo";
 import { useNavigate } from "react-router-dom";
 import { Search } from "../Search";
+import { useState } from "react";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className="header">
+    <header className="header">
       <div className="container">
         <div className="header-content">
           <div className="header-logo" onClick={() => navigate("/")}>
@@ -14,8 +15,8 @@ const Header = () => {
           <Search />
           <UserInfo />
         </div>
-      </div>  
-    </div>
+      </div>
+    </header>
   );
 };
 export default Header;

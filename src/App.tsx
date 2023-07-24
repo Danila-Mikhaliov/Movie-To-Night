@@ -20,24 +20,27 @@ function App() {
   const isAuthorized = !!currentUser?.id;
   return (
     <BrowserRouter>
-      <div className="container">
-        <Header />
-        <Routes>
-          <Route path="/">
-            <Route index element={<MovieGrid />} />
-            <Route path="movie">
-              <Route
-                path=":movieId"
-                element={isAuthorized ? <MovieSelected /> : <SignIn />}
-              />
-            </Route>
-            <Route path="sign-in" element={<SignIn />} />
-            <Route path="search-results" element={<SearchResultsPage />} />
-            <Route path="sign-up" element={<SignUp />} />
-            <Route path="activate/:uid/:token" element={<SignUpActivation />} />
+      <Header />
+
+      <Routes>
+        <Route path="/">
+          <Route index element={<MovieGrid />} />
+          <Route path="movie">
+            <Route
+              path=":movieId"
+              element={isAuthorized ? <MovieSelected /> : <SignIn />}
+            />
+            <Route
+              path=":actorId"
+              element={isAuthorized ? <MovieSelected /> : <SignIn />}
+            />
           </Route>
-        </Routes>
-      </div>
+          <Route path="sign-in" element={<SignIn />} />
+          <Route path="search-results" element={<SearchResultsPage />} />
+          <Route path="sign-up" element={<SignUp />} />
+          <Route path="activate/:uid/:token" element={<SignUpActivation />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

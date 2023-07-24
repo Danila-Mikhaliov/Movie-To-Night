@@ -2,8 +2,16 @@ import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { IMovieInfo } from "../../../types";
 import "./MovieCard.css";
 const MovieCard = (props: IMovieInfo) => {
-  const { rating, id, movieLength, name, year, poster, ageRating, type } =
-    props;
+  const {
+    rating,
+    id,
+    movieLength,
+    name,
+    year,
+    poster = "https://img.freepik.com/free-vector/realistic-tickets-composition-in-neon-and-paper-coupons-with-editable-text-and-printed-barcode_1284-58860.jpg",
+    ageRating,
+    type,
+  } = props;
   let rate = "";
   if (typeof rating === "object") {
     rate = rating.kp;
@@ -14,7 +22,10 @@ const MovieCard = (props: IMovieInfo) => {
   return (
     <div
       key={id}
-      onClick={() => navigate(`/movie/${id}`)}
+      onClick={() => {
+        navigate(`/movie/${id}`);
+        document.documentElement.scrollTop = 0;
+      }}
       className="movie-card"
     >
       <img
@@ -46,8 +57,6 @@ const MovieCard = (props: IMovieInfo) => {
               ? "Мультфильм"
               : ""}
           </p>
-          <p>{movieLength ? `Продолжительность ${movieLength} мин.` : ""} </p>
-          <p>{ageRating ? `Возрастной рейтинг: ${ageRating} лет` : ""}</p>
         </div>
       </div>
     </div>

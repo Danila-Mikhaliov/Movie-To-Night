@@ -1,52 +1,47 @@
 .movie-card {
-  display: flex;
+  position: relative;
+  width: fit-content;
+  background-color: black;
+  border-radius: 20px;
   margin: 20px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-  padding: 0.6rem 0.3rem;
-  border-radius: 10px;
-  background: radial-gradient(
-    circle,
-    rgba(43, 43, 43, 1) 53%,
-    rgba(59, 59, 59, 1) 83%
-  );
-  transition: 0.5s ease;
   cursor: pointer;
+  transition: 0.3s;
 }
 .movie-card:hover {
-  scale: 1.02;
-  box-shadow: 15px 15px 9px 0px rgba(162, 89, 255, 0.4);
+  box-shadow: 9px 10px 10px -1px rgba(151, 71, 255, 0.4);
+}
+.movie-card__content {
+  position: absolute;
+  color: white;
+  font-family: "Roboto";
+  top: 180px;
+  left: 20px;
+  width: 100%;
 }
 .movie-card__poster {
-  border-radius: 10px;
-  width: 200px;
-}
-.movie-card__rating {
-  padding: 8px;
-  width: 25px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  color: white;
-  font-family: "Roboto";
-  font-weight: 800;
-  font-size: 20px;
-}
-.movie-card__name {
-  display: inline-block;
-  width: 400px;
-  color: white;
-  font-family: "Roboto";
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.5rem;
-  transition: 0.1s ease-in;
+  width: 280px;
+  border-radius: 20px;
+  opacity: 0.7;
 }
 
-.movie-card__info {
-  color: white;
-  font-family: "Roboto";
-  font-weight: 400;
+.movie-card__rating {
+  border-radius: 8px;
+  font-weight: 700;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 0.5rem;
+}
+.movie-card__name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-size: 22px;
+  max-width: 250px;
+  transition: 0.3s;
+}
+.movie-card__name:hover {
+  color: #9747ff;
+  font-weight: 900;
 }

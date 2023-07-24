@@ -1,58 +1,33 @@
 import "./MovieGrid.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { IMovieInfo, IStoreState } from "../../../types";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  loadMovie,
-  setCurrentPage,
-} from "../../../redux/action-creators/movie-action-creators";
+import { loadMovie } from "../../../redux/action-creators/movie-action-creators";
 import { MovieCard } from "../MovieCard";
 import { MovieRecommendation } from "../MovieRecommendation";
-import { Button } from "../../Button";
 import { MovieFilter } from "../MovieFilter";
+import { MoviePagination } from "../MoviePagination";
 
 const MovieGrid = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector(
     (state: IStoreState) => state.movie.currentPage
   );
+  const isLoading = useSelector((state: IStoreState) => state.movie.isLoading);
   const sortField = useSelector((state: IStoreState) => state.movie.sortField);
   const movieType = useSelector((state: IStoreState) => state.movie.movieType);
   useEffect(() => {
     dispatch(loadMovie({ currentPage, sortField, movieType }));
   }, [currentPage, sortField, movieType]);
-  const allMovie = useSelector((state: IStoreState) => state.movie.movies);
-  const total = useSelector((state: IStoreState) => state.movie.pages);
 
+  const allMovie = useSelector((state: IStoreState) => state.movie.movies);
   return (
     <div className="movie-grid">
+      <MovieRecommendation />
       <div className="container">
-        <MovieRecommendation />
-        <div className="movie-grid__pagination">
-          <Button
-            isActive={currentPage !== 1}
-            content={"First page"}
-            callback={() => dispatch(setCurrentPage(1))}
-          />
-          <Button
-            isActive={currentPage !== 1}
-            content={"<<"}
-            callback={() => dispatch(setCurrentPage(currentPage - 1))}
-          />
-          <p className="movie-grid__pagination-page">{currentPage}</p>
-          <Button
-            isActive={currentPage !== total}
-            content={">>"}
-            callback={() => dispatch(setCurrentPage(currentPage + 1))}
-          />
-          <Button
-            isActive={currentPage !== total}
-            content={`${currentPage + 5} page`}
-            callback={() => dispatch(setCurrentPage(currentPage + 5))}
-          />
-        </div>
+        <MoviePagination />
         <MovieFilter />
-        <div className="container">
+        <div className="movie-row">
           {allMovie.map(
             ({
               type,
@@ -81,4 +56,5 @@ const MovieGrid = () => {
     </div>
   );
 };
+
 export default MovieGrid;

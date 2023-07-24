@@ -1,40 +1,61 @@
 .movie-recommendation {
-  color: white;
-  padding: 10px;
-}
-.movie-recommendation__content {
-  background: linear-gradient(
-    90deg,
-    rgba(162, 89, 255, 1) 29%,
-    rgba(255, 98, 80, 1) 86%
-  );
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 20px;
-  font-family: "open sans";
-  align-items: center;
-  padding: 20px;
+  padding: 1.2rem;
 }
 .movie-recommendation__content-poster {
-  width: 200px;
+  width: 27%;
+}
+.movie-recommendation__content-cover {
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.movie-recommendation__content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  opacity: 0.8;
 }
 .movie-recommendation__content-info {
+  background-color: rgba(151, 71, 255, 0.6);
+  padding: 0.4rem;
+  border-radius: 10px;
+  width: 60%;
+  font-family: "Roboto";
+  font-size: 1rem;
+  align-self: flex-start;
 }
 .movie-recommendation__content-info-name {
-  font-family: "Open sans";
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
   font-style: italic;
-  text-decoration: underline;
+  font-weight: 700;
 }
-.movie-recommendation__content-info-year {
-  font-family: "Open sans";
-  font-size: 1.2rem;
+.movie-recommendation__content-info-name:hover {
+  color: #9747ff;
+}
+.movie-recommendation__content-info-text {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-style: italic;
   font-weight: 500;
 }
-.movie-recommendation__content-info-length {
-}
+
 .movie-recommendation__content-info-description {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
 }

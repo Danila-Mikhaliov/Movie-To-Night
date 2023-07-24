@@ -1,63 +1,54 @@
 .selected-movie {
-  padding: 20px;
+  padding: 2rem;
+}
+.selected-movie__content-main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 50px;
+  gap: 1.3rem;
 }
-@media screen and (max-width: 900px) {
-  .selected-movie {
-    flex-direction: column;
-    align-items: center;
-  }
-  .selected-movie__content-poster {
-    display: flex;
-    margin: 0 auto;
-  }
-}
-.selected-movie__content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.selected-movie__content-name {
-  font-family: "Open sans";
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 700;
-  font-style: italic;
-  color: white;
-}
-.selected-movie__content-poster {
+.selected-movie__content-main-poster {
+  width: 25%;
   border-radius: 20px;
-  align-self: flex-start;
-  width: 30%;
 }
-.selected-movie__content-length {
-  font-family: "Open sans";
+.selected-movie__content-main-text {
+  font-family: "Roboto";
+  color: white;
+  font-weight: 500;
+}
+.selected-movie__content-main-text-name {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.selected-movie__content-main-text-info {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: white;
 }
-.selected-movie__content-description {
-  max-width: 800px;
-  font-family: "Open sans";
-  font-size: 1.4rem;
-  font-weight: 500;
+.selected-movie__content-text-description {
   color: white;
-}
-.selected-movie__content-text {
-  font-family: "Open sans";
   font-size: 1.2rem;
-  font-weight: 500;
-  color: white;
+  padding: 1rem;
 }
 .selected-movie__content-trailer {
-  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.selected-movie__content-trailer-link {
   border: none;
   border-radius: 20px;
-  width: 80%;
-  color: white;
+  width: 45%;
   height: 300px;
-  cursor: pointer;
+}
+.selected-movie__content-about-photo {
+  width: 100px;
+  height: 150px;
+}
+.selected-movie__content-about-text {
+  text-align: center;
+}
+.swiper-slide:hover {
+  scale: 1.05;
+  transition: 0.2s ease-in;
 }
