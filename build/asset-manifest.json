@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.317470a8.css",
-    "main.js": "/static/js/main.2b375300.js",
-    "index.html": "/index.html",
-    "main.317470a8.css.map": "/static/css/main.317470a8.css.map",
-    "main.2b375300.js.map": "/static/js/main.2b375300.js.map"
+    "main.css": "/Movie-To-Night/static/css/main.317470a8.css",
+    "main.js": "/Movie-To-Night/static/js/main.2b375300.js",
+    "index.html": "/Movie-To-Night/index.html",
+    "main.317470a8.css.map": "/Movie-To-Night/static/css/main.317470a8.css.map",
+    "main.2b375300.js.map": "/Movie-To-Night/static/js/main.2b375300.js.map"
   },
   "entrypoints": [
     "static/css/main.317470a8.css",
