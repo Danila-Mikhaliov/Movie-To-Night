@@ -1,8 +1,10 @@
 .movie-recommendation {
   padding: 1.2rem;
 }
+
 .movie-recommendation__content-poster {
   width: 27%;
+  border-radius: 20px;
 }
 .movie-recommendation__content-cover {
   backdrop-filter: blur(5px);
@@ -14,8 +16,6 @@
   flex-direction: row;
   gap: 2rem;
   color: white;
-  display: flex;
-  flex-direction: row;
 }
 .movie-recommendation__content {
   background-repeat: no-repeat;
@@ -58,4 +58,29 @@
   color: white;
   font-size: 1.3rem;
   font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  .movie-recommendation__content-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .movie-recommendation__content-poster {
+    width: 70%;
+  }
+  .movie-recommendation__content-info {
+    align-self: center;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-recommendation__content-info-description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 3.9em;
+  }
 }

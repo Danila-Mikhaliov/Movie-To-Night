@@ -72,10 +72,10 @@ const MovieSelected = () => {
               style={{
                 padding: "2rem",
               }}
-              spaceBetween={40}
-              slidesPerView={4}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              spaceBetween={20}
+              slidesPerView={3}
+              onSlideChange={() => {}}
+              onSwiper={() => {}}
             >
               {movie.persons?.map((el: IPersons) => (
                 <SwiperSlide
@@ -115,8 +115,8 @@ const MovieSelected = () => {
           <div className="selected-movie__content-similarmovies">
             <Swiper
               style={{ padding: "2rem" }}
-              spaceBetween={40}
-              slidesPerView={4}
+              spaceBetween={20}
+              slidesPerView={3}
               onSlideChange={() => {}}
               onSwiper={() => {}}
             >
