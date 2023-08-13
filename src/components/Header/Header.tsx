@@ -9,7 +9,10 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <div className="header-logo" onClick={() => navigate("/")}>
+          <div
+            className="header-logo"
+            onClick={() => navigate("Movie-To-Night/")}
+          >
             Movie-Night
           </div>
           <Search />
