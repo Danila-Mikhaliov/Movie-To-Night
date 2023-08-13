@@ -23,7 +23,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="Movie-To-Night/">
+        <Route path="/">
           <Route index element={<MovieGrid />} />
           <Route path="movie">
             <Route
