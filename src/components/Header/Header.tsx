@@ -2,7 +2,6 @@ import "./Header.css";
 import { UserInfo } from "../UserInfo";
 import { useNavigate } from "react-router-dom";
 import { Search } from "../Search";
-import { useState } from "react";
 const Header = () => {
   const navigate = useNavigate();
   return (
