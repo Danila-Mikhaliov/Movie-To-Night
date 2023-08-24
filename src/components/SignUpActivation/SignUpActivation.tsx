@@ -14,7 +14,7 @@ const SignUpActivation = () => {
       })
     );
   }, []);
-  return null;
+  return <div>Activation Completed</div>;
 };
 
 export default SignUpActivation;

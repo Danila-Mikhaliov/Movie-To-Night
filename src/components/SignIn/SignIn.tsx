@@ -59,7 +59,9 @@ const SignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button content="Sign in" isActive={true} typeSubmit={true} />
-            <NavLink to={"/sign-up"}>Нет аккаунта ?</NavLink>
+            <NavLink className="sign-up-link" to={"/sign-up"}>
+              Haven't got account ?
+            </NavLink>
           </form>
         </div>
       </div>

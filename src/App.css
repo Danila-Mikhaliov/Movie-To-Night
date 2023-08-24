@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 body {
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   background: linear-gradient(135deg, rgb(48, 44, 58) 14%, rgb(106, 41, 168));
 }
 .wrapper {
-  height: 300vh;
+  height: 100vh;
 }
 .container {
   margin: 0 auto;

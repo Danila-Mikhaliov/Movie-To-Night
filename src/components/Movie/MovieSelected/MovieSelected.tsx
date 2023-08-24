@@ -16,7 +16,7 @@ const MovieSelected = () => {
     dispatch(loadSelected(movieId));
   }, []);
   const navigate = useNavigate();
-
+  const pageWidth = document.documentElement.clientWidth;
   const movie = useSelector((state: IStoreState) => state.movie.selectedMovie);
   const { name, poster, year, movieLength, description, ageRating, genres } =
     movie;
@@ -72,8 +72,8 @@ const MovieSelected = () => {
               style={{
                 padding: "2rem",
               }}
-              spaceBetween={20}
-              slidesPerView={3}
+              spaceBetween={pageWidth > 1000 ? 20 : pageWidth < 500 ? 10 : 15}
+              slidesPerView={pageWidth > 1000 ? 5 : pageWidth < 500 ? 1 : 3}
               onSlideChange={() => {}}
               onSwiper={() => {}}
             >
@@ -115,8 +115,8 @@ const MovieSelected = () => {
           <div className="selected-movie__content-similarmovies">
             <Swiper
               style={{ padding: "2rem" }}
-              spaceBetween={20}
-              slidesPerView={3}
+              spaceBetween={pageWidth > 1000 ? 20 : pageWidth < 500 ? 10 : 15}
+              slidesPerView={pageWidth > 1000 ? 5 : pageWidth < 500 ? 1 : 3}
               onSlideChange={() => {}}
               onSwiper={() => {}}
             >

@@ -30,15 +30,15 @@
 }
 .selected-movie__content-trailer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 .selected-movie__content-trailer-link {
   border: none;
   border-radius: 20px;
-  width: 45%;
+  width: 90%;
   height: 300px;
 }
 .selected-movie__content-about-photo {
@@ -53,5 +53,3 @@
   transition: 0.2s ease-in;
 }
 
-@media screen and (max-width: 760px) {
-}
